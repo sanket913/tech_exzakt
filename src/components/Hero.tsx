@@ -12,6 +12,13 @@ const Hero: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+  const handleGetStarted = () => {
+    scrollToSection('contact');
+  };
+
+  const handleViewPortfolio = () => {
+    scrollToSection('portfolio');
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-24">
@@ -101,7 +108,7 @@ const Hero: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-up justify-center lg:justify-start" style={{ animationDelay: '0.6s' }}>
-                <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105">
+                <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105" onClick={handleGetStarted}>
                   <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span>Start Your Project</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
