@@ -200,7 +200,7 @@ const Hero: React.FC = () => {
           <div className="w-1.5 h-3 sm:w-2 sm:h-4 bg-gradient-to-b from-emerald-400 to-blue-500 rounded-full animate-pulse"></div>
         </div>
         <p className="text-slate-400 text-xs sm:text-sm mt-2 font-space">Scroll to explore</p>
-        <p className="text-slate-400 text-xs sm:text-sm mt-2 font-body">Scroll to explore</p>
+        
       </div>
     </section>
   );
