@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { useScrollTo } from '../hooks/useScrollTo';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollToSection } = useScrollTo();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +19,19 @@ const Header: React.FC = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Process', href: '#process' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleNavClick = (href: string) => {
+    const sectionId = href.replace('#', '');
+    scrollToSection(sectionId);
+    setIsMenuOpen(false);
+  };
+  const handleGetStarted = () => {
+    scrollToSection('services');
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${
@@ -58,7 +69,10 @@ const Header: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center space-x-2 font-heading">
+            <button 
+              onClick={handleGetStarted}
+              className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center space-x-2 font-heading"
+            >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -79,16 +93,18 @@ const Header: React.FC = () => {
         <div className="lg:hidden glass-effect border-t border-white/10">
           <div className="px-6 py-4 space-y-3">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block text-slate-300 hover:text-emerald-400 transition-colors py-2 font-heading"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleNavClick(item.href)}
+                className="block w-full text-left text-slate-300 hover:text-emerald-400 transition-colors py-2 font-heading"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
-            <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 text-white py-3 rounded-full font-semibold mt-4 font-heading">
+            <button 
+              onClick={handleGetStarted}
+              className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 text-white py-3 rounded-full font-semibold mt-4 font-heading"
+            >
               Get Started
             </button>
           </div>

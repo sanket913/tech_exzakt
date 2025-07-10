@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Sparkles, Zap, Star, Heart, Rocket } from 'lucide-react';
 
 const CustomCursor: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -20,6 +21,22 @@ const CustomCursor: React.FC = () => {
   ];
 
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                            window.innerWidth <= 768 ||
+                            ('ontouchstart' in window);
+      setIsMobile(isMobileDevice);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    // If mobile, don't initialize cursor functionality
+    if (isMobile) {
+      return () => window.removeEventListener('resize', checkMobile);
+    }
+
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       
@@ -91,6 +108,7 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mousemove', updateCursor);
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('resize', checkMobile);
       clearInterval(interval);
       interactiveElements.forEach(el => {
         el.removeEventListener('mouseenter', handleMouseEnter);
@@ -108,6 +126,11 @@ const CustomCursor: React.FC = () => {
 
     return () => clearInterval(cleanup);
   }, []);
+
+  // Don't render cursor on mobile devices
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <>
