@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { useScrollTo } from '../hooks/useScrollTo';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollToSection } = useScrollTo();
 
   useEffect(() => {
     const handleScroll = () => {
