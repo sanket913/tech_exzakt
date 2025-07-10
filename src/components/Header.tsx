@@ -17,10 +17,14 @@ const Header: React.FC = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Process', href: '#process' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleGetStarted = () => {
+    scrollToSection('services');
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${
@@ -58,7 +62,7 @@ const Header: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center space-x-2 font-heading">
+            <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center space-x-2 font-heading" onClick={handleGetStarted}>
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -88,7 +92,7 @@ const Header: React.FC = () => {
                 {item.name}
               </a>
             ))}
-            <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 text-white py-3 rounded-full font-semibold mt-4 font-heading">
+            <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 text-white py-3 rounded-full font-semibold mt-4 font-heading" onClick={handleGetStarted}>
               Get Started
             </button>
           </div>
