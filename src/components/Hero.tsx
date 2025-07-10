@@ -12,6 +12,13 @@ const Hero: React.FC = () => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+  const handleGetStarted = () => {
+    scrollToSection('contact');
+  };
+
+  const handleViewPortfolio = () => {
+    scrollToSection('portfolio');
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 lg:pt-24">
@@ -101,14 +108,17 @@ const Hero: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-up justify-center lg:justify-start" style={{ animationDelay: '0.6s' }}>
-                <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105">
+                <button className="group bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105" onClick={handleGetStarted}>
                   <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span>Start Your Project</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-2 transition-transform" />
                 </button>
-                <button className="group glass-effect text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold border border-emerald-500/30 hover:border-emerald-500/50 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105">
-                  <Play className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span>Watch Demo</span>
+                 <button 
+                  onClick={handleViewPortfolio}
+                  className="group glass-effect text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-bold border border-emerald-500/30 hover:border-emerald-500/50 transition-all duration-300 flex items-center justify-center space-x-3 font-heading text-base sm:text-lg transform hover:scale-105"
+                >
+                  <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
+                  <span>View Portfolio</span>
                 </button>
               </div>
 
@@ -200,7 +210,7 @@ const Hero: React.FC = () => {
           <div className="w-1.5 h-3 sm:w-2 sm:h-4 bg-gradient-to-b from-emerald-400 to-blue-500 rounded-full animate-pulse"></div>
         </div>
         <p className="text-slate-400 text-xs sm:text-sm mt-2 font-space">Scroll to explore</p>
-        <p className="text-slate-400 text-xs sm:text-sm mt-2 font-body">Scroll to explore</p>
+        
       </div>
     </section>
   );
