@@ -540,8 +540,8 @@ const startServer = async () => {
     await connectDB();
     app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
-      console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
-      console.log(`📧 Contact endpoint: http://localhost:${PORT}/api/contact`);
+      console.log(`📊 Health check: https://tech-exzakt.onrender.com/api/health`);
+      console.log(`📧 Contact endpoint: https://tech-exzakt.onrender.com/api/contact`);
     });
   } catch (error) {
     console.error('❌ Failed to start server:', error);
