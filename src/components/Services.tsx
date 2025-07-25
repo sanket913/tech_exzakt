@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Globe, Palette, FileText, Package, CreditCard, Settings, ArrowRight, Check, Star, Zap, Clock, Users } from 'lucide-react';
+import InternshipModal from './InternshipModal';
 
 const Services: React.FC = () => {
   const [hoveredService, setHoveredService] = useState<number | null>(null);
+  const [isInternshipModalOpen, setIsInternshipModalOpen] = useState(false);
 
   const services = [
     {
@@ -72,15 +74,15 @@ const Services: React.FC = () => {
     },
     {
       icon: Settings,
-      title: 'IT Consulting',
-      shortDesc: 'Strategic technology consulting and optimization',
-      description: 'Optimize your digital infrastructure with our expert consulting services. We help businesses leverage technology for maximum efficiency.',
-      features: ['Tech Strategy', 'System Architecture', 'Process Optimization', 'Digital Transformation', 'Security Audit'],
-      timeline: 'Ongoing',
-      expertise: 'Consulting',
-      color: 'from-teal-500 to-cyan-600',
-      bgColor: 'from-teal-500/10 to-cyan-600/10',
-      borderColor: 'border-teal-500/30',
+      title: 'Internship Program',
+      shortDesc: 'Professional internship opportunities for students',
+      description: 'Join our comprehensive internship program and gain hands-on experience in your chosen domain. Work with industry experts and build your career.',
+      features: ['Mentorship Program', 'Real Projects', 'Skill Development', 'Certificate', 'Career Guidance'],
+      timeline: '3-6 months',
+      expertise: 'Education',
+      color: 'from-indigo-500 to-purple-600',
+      bgColor: 'from-indigo-500/10 to-purple-600/10',
+      borderColor: 'border-indigo-500/30',
       popular: false
     }
   ];
@@ -210,8 +212,15 @@ const Services: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full bg-gradient-to-r ${service.color} text-white py-3 sm:py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group/btn font-heading hover:shadow-lg transform hover:scale-105`}>
-                  <span>Get Quote</span>
+                <button 
+                  onClick={() => {
+                    if (service.title === 'Internship Program') {
+                      setIsInternshipModalOpen(true);
+                    }
+                  }}
+                  className={`w-full bg-gradient-to-r ${service.color} text-white py-3 sm:py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group/btn font-heading hover:shadow-lg transform hover:scale-105`}
+                >
+                  <span>{service.title === 'Internship Program' ? 'Apply Now' : 'Get Quote'}</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
 
@@ -259,6 +268,12 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Internship Modal */}
+      <InternshipModal 
+        isOpen={isInternshipModalOpen} 
+        onClose={() => setIsInternshipModalOpen(false)} 
+      />
     </section>
   );
 };

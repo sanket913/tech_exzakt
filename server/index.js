@@ -164,7 +164,122 @@ const rateLimit = (req, res, next) => {
   next();
 };
 
+// Intenrship Modal schema
+const InternshipApplicationSchema = new mongoose.Schema(
+  {
+    fullName: { type: String, required: true },
+    email:    { type: String, required: true },
+    phone:    { type: String, required: true },
+    college:  { type: String, required: true },
+    course:   { type: String, required: true },
+    year:     { type: String, required: true },
+    domain:   { type: String, required: true },
+    duration: { type: String, required: true },
+    motivation: { type: String, required: true },
+    availability: { type: String, required: true },
+    ipAddress: String,
+    userAgent: String,
+  },
+  { timestamps: true }
+);
+const InternshipApplication = mongoose.model('InternshipApplication', InternshipApplicationSchema);
+
+const validateInternshipData=(req, res, next)=> {
+  const {
+    fullName, email, phone, college, course,
+    year, domain, duration, motivation, availability
+  } = req.body;
+
+  const missingFields = [];
+
+  if (!fullName) missingFields.push('fullName');
+  if (!email) missingFields.push('email');
+  if (!phone) missingFields.push('phone');
+  if (!college) missingFields.push('college');
+  if (!course) missingFields.push('course');
+  if (!year) missingFields.push('year');
+  if (!domain) missingFields.push('domain');
+  if (!duration) missingFields.push('duration');
+  if (!motivation) missingFields.push('motivation');
+  if (!availability) missingFields.push('availability');
+
+  if (missingFields.length > 0) {
+    return res.status(400).json({
+      success: false,
+      message: `Missing fields: ${missingFields.join(', ')}`
+    });
+  }
+
+  next();
+};
+
 // Routes
+
+//Routes for submiting application
+app.post('/api/internship', validateInternshipData, async (req, res) => {
+  try {
+    const {
+      fullName, email, phone, college, course,
+      year, domain, duration, motivation, availability
+    } = req.body;
+
+    const ipAddress = req.ip || req.connection.remoteAddress;
+    const userAgent = req.get('User-Agent');
+
+    const newApplication = new InternshipApplication({
+      fullName: fullName.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone.trim(),
+      college: college.trim(),
+      course: course.trim(),
+      year: year.trim(),
+      domain: domain.trim(),
+      duration: duration.trim(),
+      motivation: motivation.trim(),
+      availability: availability.trim(),
+      ipAddress,
+      userAgent
+    });
+
+    const savedApp = await newApplication.save();
+
+    console.log(`📄 Internship application received from ${email}`);
+
+    res.status(201).json({
+      success: true,
+      message: 'Your application has been submitted successfully!',
+      data: {
+        id: savedApp._id,
+        fullName: savedApp.fullName,
+        email: savedApp.email,
+        domain: savedApp.domain,
+        submittedAt: savedApp.createdAt
+      }
+    });
+
+  } catch (error) {
+    console.error('❌ Internship form error:', error);
+
+    if (error.name === 'ValidationError') {
+      const errors = {};
+      Object.keys(error.errors).forEach(key => {
+        errors[key] = error.errors[key].message;
+      });
+
+      return res.status(400).json({
+        success: false,
+        message: 'Validation failed',
+        errors
+      });
+    }
+
+    res.status(500).json({
+      success: false,
+      message: 'Something went wrong. Please try again later.',
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+});
 
 // Health check
 app.get('/api/health', (req, res) => {
