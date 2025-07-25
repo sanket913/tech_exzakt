@@ -193,14 +193,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Enhanced Scroll Indicator */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-emerald-500/50 rounded-full flex justify-center p-1.5 sm:p-2">
-          <div className="w-1.5 h-3 sm:w-2 sm:h-4 bg-gradient-to-b from-emerald-400 to-blue-500 rounded-full animate-pulse"></div>
-        </div>
-        <p className="text-slate-400 text-xs sm:text-sm mt-2 font-space">Scroll to explore</p>
-      </div>
     </section>
   );
 };
