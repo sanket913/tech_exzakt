@@ -234,39 +234,6 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA Section */}
-        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
-            <div className="mb-6">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 font-heading">
-                Ready to Get Started?
-              </h3>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-body">
-                Every project is unique. Let's discuss your specific requirements and create a tailored solution that perfectly fits your vision and goals.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2 font-heading transform hover:scale-105">
-                <span>Start Your Project</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              
-              <div className="flex items-center space-x-4 text-slate-400">
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-body">Free consultation</span>
-                </div>
-                <div className="w-1 h-4 bg-slate-600"></div>
-                <div className="flex items-center space-x-1">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-body">Custom quotes</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Internship Modal */}
