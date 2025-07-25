@@ -39,8 +39,8 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
     'SEO/SEM'
   ];
 
-  const durations = ['3 months', '6 months', '1 year'];
-  const years = ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Graduate', 'Post Graduate'];
+  const durations = ['1 months', '3 months', '6 months'];
+  const years = ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Graduate', 'Post Graduate', 'Diploma'];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -55,7 +55,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/internship', {
+      const response = await fetch('https://tech-exzakt.onrender.com/api/internship', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
