@@ -83,18 +83,6 @@ const Process: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-            <p className="text-slate-300 mb-6">Let's discuss your ideas and create something amazing together</p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2 mx-auto">
-              <span>Start Your Project</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
