@@ -403,7 +403,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
               </div>
 
               {/* Submit Button */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 pb-4">
                 <button
                   type="button"
                   onClick={onClose}
