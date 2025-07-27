@@ -34,7 +34,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-20 relative overflow-hidden">
+    <section id="process" className="py-5 relative overflow-hidden">
       <div className="absolute inset-0 bg-slate-900"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -83,6 +83,7 @@ const Process: React.FC = () => {
             ))}
           </div>
         </div>
+        
       </div>
     </section>
   );
