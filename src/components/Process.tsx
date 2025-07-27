@@ -34,10 +34,10 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="process" className="py-5 relative overflow-hidden">
+    <section id="process" className="py-5 relative overflow-hidden" style={{ zIndex: 1 }}>
       <div className="absolute inset-0 bg-slate-900"></div>
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative" style={{ zIndex: 10 }}>
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Process</span>
