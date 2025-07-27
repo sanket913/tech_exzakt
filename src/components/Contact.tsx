@@ -279,18 +279,7 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Free Consultation */}
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-4">Free Consultation</h3>
-              <p className="text-slate-300 mb-6">
-                Schedule a free 30-minute consultation to discuss your project requirements 
-                and explore how we can help bring your vision to life.
-              </p>
-              <button className="group bg-slate-800/50 hover:bg-slate-700/50 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2">
-                <span>Schedule Call</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            
 
             {/* Project Estimate */}
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
@@ -299,7 +288,16 @@ const Contact: React.FC = () => {
                 Receive a detailed project estimate with timeline and cost breakdown 
                 within 24 hours of your inquiry.
               </p>
-              <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2">
+              <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2" onClick={() => {
+                  // Scroll to contact form
+                  const contactForm = document.querySelector('form');
+                  if (contactForm) {
+                    contactForm.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'center'
+                    });
+                  }
+                }}>
                 <span>Get Estimate</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
