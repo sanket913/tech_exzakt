@@ -105,10 +105,6 @@ const Services: React.FC = () => {
               Digital Presence
             </span>
           </h2>
-          
-          <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-body">
-            Comprehensive digital solutions tailored to transform your business and drive sustainable growth in the digital age
-          </p>
         </div>
 
         {/* Services Grid */}
@@ -216,6 +212,14 @@ const Services: React.FC = () => {
                   onClick={() => {
                     if (service.title === 'Internship Program') {
                       setIsInternshipModalOpen(true);
+                    } else {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ 
+                          behavior: 'smooth',
+                          block: 'start'
+                        });
+                      }
                     }
                   }}
                   className={`w-full bg-gradient-to-r ${service.color} text-white py-3 sm:py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 group/btn font-heading hover:shadow-lg transform hover:scale-105`}
@@ -234,6 +238,7 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
+
       </div>
 
       {/* Internship Modal */}
