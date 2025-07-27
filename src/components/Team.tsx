@@ -99,13 +99,16 @@ const Team: React.FC = () => {
 
                     {/* Social Links */}
                     <div className="flex space-x-3">
-                      <a href={member.social.linkedin} className="w-8 h-8 bg-slate-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
+                      <a href={member.social.linkedin} className="w-8 h-8 bg-slate-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" target="_blank"
+  rel="noopener noreferrer">
                         <Linkedin className="w-4 h-4 text-slate-400 hover:text-white" />
                       </a>
-                      <a href={member.social.github} className="w-8 h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
+                      <a href={member.social.github} className="w-8 h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300" target="_blank"
+  rel="noopener noreferrer">
                         <Github className="w-4 h-4 text-slate-400 hover:text-white" />
                       </a>
-                      <a href={`mailto:${member.social.email}`} className="w-8 h-8 bg-slate-800/50 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300">
+                      <a href={`mailto:${member.social.email}`} className="w-8 h-8 bg-slate-800/50 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300" target="_blank"
+  rel="noopener noreferrer">
                         <Mail className="w-4 h-4 text-slate-400 hover:text-white" />
                       </a>
                     </div>
