@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Linkedin, Twitter, Github, Mail } from 'lucide-react';
+import { User, Linkedin, Github, Mail } from 'lucide-react';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -10,10 +10,9 @@ const Team: React.FC = () => {
       image: '/mann.jpeg', // Replace with actual image URL
       skills: ['Leadership', 'Strategy', 'Business Development'],
       social: {
-        linkedin: '#',
-        twitter: '#',
+        linkedin: 'https://www.linkedin.com/in/mann-kachhiya/',
         github: '#',
-        email: 'mann@techexzakt.com'
+        email: 'mann@gmail.com'
       }
     },
     {
@@ -23,10 +22,9 @@ const Team: React.FC = () => {
       image: '/sanket.png',
       skills: ['Full-Stack Development', 'Architecture', 'DevOps'],
       social: {
-        linkedin: '#',
-        twitter: '#',
-        github: '#',
-        email: 'sanket@techexzakt.com'
+        linkedin: 'https://www.linkedin.com/in/sanket-prajapati27/',
+        github: 'https://github.com/sanket913',
+        email: 'sanket2742003@gmail.com'
       }
     }
   ];
@@ -103,9 +101,6 @@ const Team: React.FC = () => {
                     <div className="flex space-x-3">
                       <a href={member.social.linkedin} className="w-8 h-8 bg-slate-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
                         <Linkedin className="w-4 h-4 text-slate-400 hover:text-white" />
-                      </a>
-                      <a href={member.social.twitter} className="w-8 h-8 bg-slate-800/50 hover:bg-sky-500 rounded-lg flex items-center justify-center transition-colors duration-300">
-                        <Twitter className="w-4 h-4 text-slate-400 hover:text-white" />
                       </a>
                       <a href={member.social.github} className="w-8 h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
                         <Github className="w-4 h-4 text-slate-400 hover:text-white" />
