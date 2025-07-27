@@ -113,13 +113,16 @@ const Portfolio: React.FC = () => {
   useEffect(() => {
     if (selectedProject) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
     } else {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
     }
 
     // Cleanup on unmount
     return () => {
       document.body.style.overflow = 'unset';
+      document.body.classList.remove('modal-open');
     };
   }, [selectedProject]);
 
@@ -223,10 +226,10 @@ const Portfolio: React.FC = () => {
       
       {/* MODAL */}
       {selectedProject && (
-        <div className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 lg:p-8" style={{ zIndex: 999999 }}>
+        <div className="modal-overlay fixed inset-0 flex items-center justify-center p-4 sm:p-6 lg:p-8 pt-24 sm:pt-28 lg:pt-32" style={{ zIndex: 99999 }}>
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={closeProjectModal}></div>
 
-          <div className="relative w-full max-w-4xl max-h-[90vh] bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl transform translate-y-0">
+          <div className="modal-content relative w-full max-w-4xl max-h-[90vh] bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
             {/* Modal Header */}
             <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-700/50 bg-slate-800/50">
               <div className="flex items-center space-x-3">
@@ -252,11 +255,11 @@ const Portfolio: React.FC = () => {
                   {/* Main Content */}
                   <div className="lg:col-span-2 space-y-6">
                     {/* Project Image */}
-                    <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 rounded-xl sm:rounded-2xl overflow-hidden group">
+                    <div className="relative h-48 sm:h-64 lg:h-80 rounded-xl sm:rounded-2xl overflow-hidden group">
                       <img 
                         src={selectedProject.image} 
                         alt={selectedProject.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-fit transition-transform duration-500 group-hover:scale-105" 
                       />
                       {selectedProject.liveUrl && (
                         <div className="absolute top-4 right-4">
@@ -276,7 +279,7 @@ const Portfolio: React.FC = () => {
                     {/* Key Features */}
                     <div>
                       <h4 className="text-lg sm:text-xl font-bold text-white mb-4 font-heading">Key Features</h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="grid sm:grid-cols-2 gap-3">
                         {selectedProject.features.map((feature: string, i: number) => (
                           <div key={i} className="flex items-center space-x-3 bg-slate-800/30 rounded-lg p-3 border border-slate-700/30">
                             <div className="w-2 h-2 bg-cyan-400 rounded-full flex-shrink-0"></div>
@@ -289,9 +292,9 @@ const Portfolio: React.FC = () => {
                     {/* Technologies */}
                     <div>
                       <h4 className="text-lg sm:text-xl font-bold text-white mb-4 font-heading">Technologies Used</h4>
-                      <div className="flex flex-wrap gap-2 sm:gap-3">
+                      <div className="flex flex-wrap gap-2">
                         {selectedProject.tags.map((tag: string, i: number) => (
-                          <span key={i} className="text-xs sm:text-sm text-slate-300 bg-slate-800/50 border border-slate-700/50 px-2 sm:px-3 py-1 sm:py-2 rounded-full font-medium">
+                          <span key={i} className="text-xs sm:text-sm text-slate-300 bg-slate-800/50 border border-slate-700/50 px-3 py-2 rounded-full font-medium">
                             {tag}
                           </span>
                         ))}
@@ -302,7 +305,7 @@ const Portfolio: React.FC = () => {
                   {/* Sidebar */}
                   <div className="lg:col-span-1 space-y-6">
                     {/* Project Details */}
-                    <div className="bg-slate-800/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 border border-slate-700/30">
+                    <div className="bg-slate-800/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-slate-700/30">
                       <h4 className="text-lg font-bold text-white mb-4 font-heading">Project Details</h4>
                       <div className="space-y-4">
                         <div>
@@ -327,13 +330,13 @@ const Portfolio: React.FC = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="space-y-3 sm:space-y-4">
+                    <div className="space-y-3">
                       {selectedProject.liveUrl && (
                         <a 
                           href={selectedProject.liveUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className={`block w-full bg-gradient-to-r ${selectedProject.color} text-white text-center py-3 sm:py-4 px-4 sm:px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base`}
+                          className={`block w-full bg-gradient-to-r ${selectedProject.color} text-white text-center py-3 sm:py-4 px-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2`}
                         >
                           <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                           <span>View Live Demo</span>
@@ -343,16 +346,16 @@ const Portfolio: React.FC = () => {
                     </div>
 
                     {/* Quick Stats */}
-                    <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 border border-slate-700/30">
+                    <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-slate-700/30">
                       <h4 className="text-lg font-bold text-white mb-4 font-heading">Quick Stats</h4>
                       <div className="grid grid-cols-2 gap-4">
                         <div className="text-center">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1">{selectedProject.tags.length}</div>
-                          <div className="text-slate-400 text-xs sm:text-sm">Technologies</div>
+                          <div className="text-xl sm:text-2xl font-bold text-white mb-1">{selectedProject.tags.length}</div>
+                          <div className="text-slate-400 text-xs">Technologies</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1">{selectedProject.features.length}</div>
-                          <div className="text-slate-400 text-xs sm:text-sm">Features</div>
+                          <div className="text-xl sm:text-2xl font-bold text-white mb-1">{selectedProject.features.length}</div>
+                          <div className="text-slate-400 text-xs">Features</div>
                         </div>
                       </div>
                     </div>
