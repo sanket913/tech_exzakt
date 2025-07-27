@@ -67,6 +67,22 @@ const Portfolio: React.FC = () => {
         'Interactive Learning Dashboard'
       ]
     },
+    {
+      title: 'Vedax Pharma',
+      category: 'Web Development',
+      description: 'A corporate pharma company website built using PHP, MySQL, HTML, CSS, and JavaScript, showcasing products and company profile with client testimonials and contact section.',
+      image: 'https://res.cloudinary.com/duozzi2vq/image/upload/vp_tgncpa.jpg', // Replace this placeholder with the actual screenshot or extracted header image
+      tags: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      color: 'from-green-500 to-teal-500',
+      liveUrl: 'https://www.vedaxpharma.com/',
+      features: [
+        'Product Showcase (Respiratory, Skin, G.I. care, etc.)',
+        'Static Informational Sections (About, Why Choose Us)',
+        'Client Testimonials',
+        'Responsive Design & Contact Form',
+        'Company Profile Details'
+      ]
+    },
 
     {
       title: 'Event Management System',
