@@ -112,18 +112,18 @@ const Testimonials: React.FC = () => {
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-gray-900"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
-            <Star className="w-4 h-4 text-cyan-400 fill-current" />
-            <span className="text-cyan-400 font-medium text-sm font-heading">Client Reviews</span>
+          <div className="inline-flex items-center space-x-2 premium-card border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+            <span className="text-yellow-400 font-medium text-sm font-heading">Client Reviews</span>
           </div>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 font-heading">
-            What Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Clients Say</span>
+            What Our <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">Clients Say</span>
           </h2>
           
           <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-body">
@@ -146,13 +146,13 @@ const Testimonials: React.FC = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 sm:p-8 lg:p-12 hover:border-cyan-500/30 transition-all duration-500">
+                  <div className="premium-card backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 sm:p-8 lg:p-12 hover:border-yellow-500/30 transition-all duration-500">
                     <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-center">
                       
                       {/* Left: Client Info */}
                       <div className="lg:col-span-1 text-center lg:text-left">
                         <div className="relative inline-block mb-6">
-                          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-slate-700 hover:border-cyan-500/50 transition-colors duration-300 mx-auto lg:mx-0">
+                          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full overflow-hidden border-4 border-gray-700 hover:border-yellow-500/50 transition-colors duration-300 mx-auto lg:mx-0">
                             <img 
                               src={testimonial.image} 
                               alt={testimonial.name}
@@ -161,15 +161,15 @@ const Testimonials: React.FC = () => {
                           </div>
                           
                           {/* Quote Icon */}
-                          <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                            <Quote className="w-5 h-5 text-white" />
+                          <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
+                            <Quote className="w-5 h-5 text-black" />
                           </div>
                         </div>
                         
                         <div className="space-y-2 mb-4">
                           <h4 className="text-xl sm:text-2xl font-bold text-white font-heading">{testimonial.name}</h4>
-                          <p className="text-cyan-400 font-semibold font-body">{testimonial.role}</p>
-                          <p className="text-slate-400 text-sm font-body">{testimonial.company}</p>
+                          <p className="text-yellow-400 font-semibold font-body">{testimonial.role}</p>
+                          <p className="text-gray-400 text-sm font-body">{testimonial.company}</p>
                         </div>
 
                         {/* Rating */}
@@ -181,8 +181,8 @@ const Testimonials: React.FC = () => {
 
                         {/* Project Info */}
                         <div className="space-y-2">
-                          <div className="bg-slate-800/50 rounded-lg p-3 border border-slate-700/50">
-                            <div className="text-slate-400 text-xs font-body mb-1">Project:</div>
+                          <div className="premium-card rounded-lg p-3 border border-gray-700/50">
+                            <div className="text-gray-400 text-xs font-body mb-1">Project:</div>
                             <div className="text-white font-semibold text-sm font-heading">{testimonial.project}</div>
                           </div>
                           <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-lg p-3">
@@ -213,7 +213,7 @@ const Testimonials: React.FC = () => {
                             <span className="text-slate-300 text-sm font-body">Verified Client</span>
                           </div>
                           <div className="flex items-center space-x-2 bg-slate-800/30 rounded-full px-4 py-2">
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
                             <span className="text-slate-300 text-sm font-body">Project Completed</span>
                           </div>
                         </div>
@@ -230,29 +230,29 @@ const Testimonials: React.FC = () => {
             {/* Previous Button */}
             <button
               onClick={prevTestimonial}
-              className="w-12 h-12 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 hover:border-cyan-500/50 rounded-full flex items-center justify-center transition-all duration-300 group"
+              className="w-12 h-12 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 hover:border-yellow-500/50 rounded-full flex items-center justify-center transition-all duration-300 group"
             >
-              <ChevronLeft className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+              <ChevronLeft className="w-5 h-5 text-gray-400 group-hover:text-yellow-400 transition-colors" />
             </button>
 
             {/* Play/Pause Button */}
             <button
               onClick={togglePlayPause}
-              className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 rounded-full flex items-center justify-center transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25"
+              className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 rounded-full flex items-center justify-center transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25"
             >
               {isPlaying ? (
-                <Pause className="w-5 h-5 text-white" />
+                <Pause className="w-5 h-5 text-black" />
               ) : (
-                <Play className="w-5 h-5 text-white ml-0.5" />
+                <Play className="w-5 h-5 text-black ml-0.5" />
               )}
             </button>
 
             {/* Next Button */}
             <button
               onClick={nextTestimonial}
-              className="w-12 h-12 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 hover:border-cyan-500/50 rounded-full flex items-center justify-center transition-all duration-300 group"
+              className="w-12 h-12 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 hover:border-yellow-500/50 rounded-full flex items-center justify-center transition-all duration-300 group"
             >
-              <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+              <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-yellow-400 transition-colors" />
             </button>
           </div>
 
@@ -264,8 +264,8 @@ const Testimonials: React.FC = () => {
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentIndex
-                    ? 'w-8 h-2 bg-gradient-to-r from-cyan-500 to-blue-600'
-                    : 'w-2 h-2 bg-slate-600 hover:bg-slate-500'
+                    ? 'w-8 h-2 bg-gradient-to-r from-yellow-500 to-yellow-600'
+                    : 'w-2 h-2 bg-gray-600 hover:bg-gray-500'
                 }`}
               />
             ))}
@@ -273,9 +273,9 @@ const Testimonials: React.FC = () => {
 
           {/* Progress Bar */}
           <div className="mt-4 max-w-md mx-auto">
-            <div className="w-full bg-slate-800 rounded-full h-1">
+            <div className="w-full bg-gray-800 rounded-full h-1">
               <div 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 h-1 rounded-full transition-all duration-300"
+                className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-1 rounded-full transition-all duration-300"
                 style={{ width: `${((currentIndex + 1) / testimonials.length) * 100}%` }}
               ></div>
             </div>
@@ -285,25 +285,25 @@ const Testimonials: React.FC = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16 sm:mt-20">
           <div className="text-center">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-yellow-500/30 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2 font-heading">100%</div>
               <div className="text-slate-300 font-body">Client Satisfaction</div>
             </div>
           </div>
           <div className="text-center">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-yellow-500/30 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2 font-heading">50+</div>
               <div className="text-slate-300 font-body">Happy Clients</div>
             </div>
           </div>
           <div className="text-center">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-yellow-500/30 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2 font-heading">5.0</div>
               <div className="text-slate-300 font-body">Average Rating</div>
             </div>
           </div>
           <div className="text-center">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300">
+            <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-yellow-500/30 transition-all duration-300">
               <div className="text-3xl sm:text-4xl font-bold text-white mb-2 font-heading">24/7</div>
               <div className="text-slate-300 font-body">Support</div>
             </div>
