@@ -185,7 +185,6 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -trangray-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="email"
                         id="email"
@@ -205,7 +204,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       Phone Number *
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -trangray-y-1/2 w-5 h-5 text-gray-400" />
+                      
                       <input
                         type="tel"
                         id="phone"
