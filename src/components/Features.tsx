@@ -53,7 +53,7 @@ const Features: React.FC = () => {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Why Choose
-            <span className="premium-gradient-text premium-text-glow"> Tech Exzakt</span>
+            <span className="premium-gradient-text premium-text-glow"> NxElite</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We combine technical excellence with creative innovation to deliver solutions that drive real business results
