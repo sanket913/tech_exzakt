@@ -24,7 +24,7 @@ const About: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Tech Exzakt</span>
+              About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">NxElite</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We are a leading web development company with over 10 skilled professionals and 50+ completed projects, 
@@ -42,7 +42,7 @@ const About: React.FC = () => {
                 Transforming Ideas into Powerful Digital Experiences
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">
-                At Tech Exzakt IT Solutions, we specialize in transforming ideas into powerful digital experiences. 
+                At NxElite IT Solutions, we specialize in transforming ideas into powerful digital experiences. 
                 Our team of 10+ expert developers and designers work collaboratively to deliver solutions that 
                 exceed expectations and drive business growth.
               </p>
