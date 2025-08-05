@@ -135,7 +135,7 @@ const Footer: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white font-semibold mb-1">info@techexzakt.com</p>
+                <p className="text-white font-semibold mb-1">info@nxelite.com</p>
                 <p className="text-slate-400 text-sm">We reply within 24 hours</p>
               </div>
               <div className="text-center group">
