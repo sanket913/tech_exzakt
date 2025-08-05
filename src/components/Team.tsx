@@ -6,7 +6,7 @@ const Team: React.FC = () => {
     {
       name: 'Mann Kachhiya',
       role: 'Founder & CEO',
-      description: 'Visionary leader with 5+ years of experience in technology and business development.',
+      description: 'Visionary leader with 3+ years of experience in technology and business development.',
       image: '/mann.jpeg', // Replace with actual image URL
       skills: ['Leadership', 'Strategy', 'Business Development'],
       social: {
