@@ -38,10 +38,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-slate-900">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900 to-slate-800"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900 to-black"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -52,12 +52,12 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src="/footer.png" // or .png if that's the actual format
+                  src="/header.png" // or .png if that's the actual format
                   alt="Tech Exzakt"
                   className="w-24 sm:w-28 md:w-32 lg:w-36 object-contain transition-all duration-300"
                 />
               </div>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-gray-300 leading-relaxed mb-6">
                 Transforming ideas into powerful digital experiences. We deliver innovative solutions 
                 that drive business growth and success.
               </p>
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{service}</span>
                     </a>
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{item}</span>
                     </a>
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {resources.map((resource, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{resource}</span>
                     </a>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/30">
+          <div className="premium-card backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/30">
             <h4 className="text-2xl font-bold text-white text-center mb-8">Get In Touch</h4>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center group">
@@ -157,7 +157,7 @@ const Footer: React.FC = () => {
             <div className="text-slate-400 text-center md:text-left">
               <p>© 2025 Tech Exzakt IT Solutions. All rights reserved.</p>
             </div>
-            <div className="text-slate-400 text-center md:text-right">
+            <div className="text-gray-400 text-center md:text-right">
               <p>Designed with ❤️ by Tech Exzakt Team</p>
             </div>
           </div>
