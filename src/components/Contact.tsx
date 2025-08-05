@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'info@techexzakt.com',
+      content: 'info@nxelite.com',
       description: 'We reply within 24 hours',
       color: 'from-blue-500 to-cyan-600'
     },
