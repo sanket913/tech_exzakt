@@ -1,4 +1,4 @@
-import React from 'react';
+
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 relative">
+    <div className="min-h-screen bg-black relative">
       <CustomCursor />
       <Header />
       <Hero />
