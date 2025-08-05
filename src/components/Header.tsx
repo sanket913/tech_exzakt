@@ -35,7 +35,7 @@ const Header: React.FC = () => {
             <div className="relative group">
               <img
                 src="/header.png" // or .png if that's the actual format
-                alt="Tech Exzakt"
+                alt="NxElite"
                 className="w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 object-contain transition-all duration-300"
               />
             </div>
