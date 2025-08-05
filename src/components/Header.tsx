@@ -25,14 +25,14 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'glass-effect shadow-2xl' 
+        ? 'bg-black/90 backdrop-blur-xl border-b border-yellow-500/20 shadow-2xl' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="relative">
+            <div className="relative group">
               <img
                 src="/header.png" // or .png if that's the actual format
                 alt="Tech Exzakt"
@@ -48,10 +48,10 @@ const Header: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-slate-300 hover:text-emerald-400 transition-all duration-300 font-medium relative group font-heading"
+                className="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium relative group font-body text-sm uppercase tracking-wider"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-emerald-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </nav>
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-emerald-400 transition-colors"
+            className="lg:hidden p-2 text-white hover:text-yellow-400 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -70,13 +70,13 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden glass-effect border-t border-white/10">
+        <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-yellow-500/20">
           <div className="px-6 py-4 space-y-3">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block text-slate-300 hover:text-emerald-400 transition-colors py-2 font-heading"
+                className="block text-gray-300 hover:text-yellow-400 transition-colors py-2 font-body uppercase tracking-wider text-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
