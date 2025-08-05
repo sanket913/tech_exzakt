@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Sparkles, Zap, Star, Heart, Rocket } from 'lucide-react';
+import { Sparkles, Zap, Star, Rocket, Crown } from 'lucide-react';
+import { JSX } from 'react/jsx-runtime';
 
 const CustomCursor: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [followerPosition, setFollowerPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -14,29 +14,13 @@ const CustomCursor: React.FC = () => {
 
   const icons = [
     <Sparkles key="sparkles" className="w-3 h-3" />,
-    <Zap key="zap" className="w-3 h-3" />,
+    <Crown key="crown" className="w-3 h-3" />,
     <Star key="star" className="w-3 h-3" />,
-    <Heart key="heart" className="w-3 h-3" />,
+    <Zap key="zap" className="w-3 h-3" />,
     <Rocket key="rocket" className="w-3 h-3" />
   ];
 
   useEffect(() => {
-    // Check if device is mobile
-    const checkMobile = () => {
-      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-                            window.innerWidth <= 768 ||
-                            ('ontouchstart' in window);
-      setIsMobile(isMobileDevice);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    // If mobile, don't initialize cursor functionality
-    if (isMobile) {
-      return () => window.removeEventListener('resize', checkMobile);
-    }
-
     const updateCursor = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       
@@ -71,7 +55,7 @@ const CustomCursor: React.FC = () => {
     const handleMouseDown = () => {
       setIsClicking(true);
       // Create burst of particles on click
-      const burstParticles = [];
+      const burstParticles: { x: number; y: number; id: number; icon: JSX.Element; }[] = [];
       for (let i = 0; i < 8; i++) {
         const angle = (i / 8) * Math.PI * 2;
         const distance = 30 + Math.random() * 20;
@@ -108,7 +92,6 @@ const CustomCursor: React.FC = () => {
       document.removeEventListener('mousemove', updateCursor);
       document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('resize', checkMobile);
       clearInterval(interval);
       interactiveElements.forEach(el => {
         el.removeEventListener('mouseenter', handleMouseEnter);
@@ -127,11 +110,6 @@ const CustomCursor: React.FC = () => {
     return () => clearInterval(cleanup);
   }, []);
 
-  // Don't render cursor on mobile devices
-  if (isMobile) {
-    return null;
-  }
-
   return (
     <>
       {/* Trail Effect */}
@@ -144,7 +122,7 @@ const CustomCursor: React.FC = () => {
             top: `${point.y - 2}px`,
             width: `${4 + index * 0.5}px`,
             height: `${4 + index * 0.5}px`,
-            background: `linear-gradient(135deg, rgba(16, 185, 129, ${0.8 - index * 0.05}), rgba(59, 130, 246, ${0.6 - index * 0.04}))`,
+            background: `linear-gradient(135deg, rgba(255, 215, 0, ${0.8 - index * 0.05}), rgba(255, 165, 0, ${0.6 - index * 0.04}))`,
             transform: `scale(${1 - index * 0.06})`,
             transition: 'all 0.1s ease-out'
           }}
@@ -153,7 +131,7 @@ const CustomCursor: React.FC = () => {
 
       {/* Main Cursor */}
       <div
-        className={`fixed pointer-events-none z-[9999] rounded-full transition-all duration-200 ease-out ${
+        className={`fixed pointer-events-none z-[99999] rounded-full transition-all duration-200 ease-out ${
           isClicking ? 'scale-75' : isHovering ? 'scale-150' : 'scale-100'
         }`}
         style={{
@@ -162,24 +140,24 @@ const CustomCursor: React.FC = () => {
           width: '24px',
           height: '24px',
           background: isClicking 
-            ? 'linear-gradient(135deg, #ef4444, #f97316)' 
+            ? 'linear-gradient(135deg, #FFD700, #FFA500)' 
             : isHovering 
-            ? 'linear-gradient(135deg, #8b5cf6, #ec4899)'
-            : 'linear-gradient(135deg, #10b981, #3b82f6)',
+            ? 'linear-gradient(135deg, #FFA500, #FFD700)'
+            : 'linear-gradient(135deg, #FFD700, #FFA500)',
           boxShadow: isClicking 
-            ? '0 0 20px rgba(239, 68, 68, 0.6), 0 0 40px rgba(249, 115, 22, 0.4)'
+            ? '0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.6)'
             : isHovering 
-            ? '0 0 20px rgba(139, 92, 246, 0.6), 0 0 40px rgba(236, 72, 153, 0.4)'
-            : '0 0 15px rgba(16, 185, 129, 0.5), 0 0 30px rgba(59, 130, 246, 0.3)',
+            ? '0 0 20px rgba(255, 165, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6)'
+            : '0 0 15px rgba(255, 215, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4)',
         }}
       >
         {/* Inner glow */}
-        <div className="absolute inset-1 rounded-full bg-white/20 animate-pulse"></div>
+        <div className="absolute inset-1 rounded-full bg-white/30 animate-pulse"></div>
       </div>
 
       {/* Follower Ring */}
       <div
-        className={`fixed pointer-events-none z-[9998] rounded-full border-2 transition-all duration-300 ease-out ${
+        className={`fixed pointer-events-none z-[99998] rounded-full border-2 transition-all duration-300 ease-out ${
           isClicking ? 'scale-50 border-4' : isHovering ? 'scale-200 border-4' : 'scale-100'
         }`}
         style={{
@@ -188,23 +166,23 @@ const CustomCursor: React.FC = () => {
           width: '50px',
           height: '50px',
           borderColor: isClicking 
-            ? 'rgba(239, 68, 68, 0.6)' 
+            ? 'rgba(255, 215, 0, 0.8)' 
             : isHovering 
-            ? 'rgba(139, 92, 246, 0.6)'
-            : 'rgba(16, 185, 129, 0.4)',
+            ? 'rgba(255, 165, 0, 0.8)'
+            : 'rgba(255, 215, 0, 0.6)',
           boxShadow: `0 0 20px ${isClicking 
-            ? 'rgba(239, 68, 68, 0.3)' 
+            ? 'rgba(255, 215, 0, 0.4)' 
             : isHovering 
-            ? 'rgba(139, 92, 246, 0.3)'
-            : 'rgba(16, 185, 129, 0.2)'}`,
+            ? 'rgba(255, 165, 0, 0.4)'
+            : 'rgba(255, 215, 0, 0.3)'}`,
         }}
       >
         {/* Rotating dots around the ring */}
         <div className="absolute inset-0 animate-spin">
-          <div className="absolute top-0 left-1/2 w-1 h-1 bg-emerald-400 rounded-full transform -translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-1/2 w-1 h-1 bg-blue-400 rounded-full transform -translate-x-1/2"></div>
-          <div className="absolute left-0 top-1/2 w-1 h-1 bg-purple-400 rounded-full transform -translate-y-1/2"></div>
-          <div className="absolute right-0 top-1/2 w-1 h-1 bg-pink-400 rounded-full transform -translate-y-1/2"></div>
+          <div className="absolute top-0 left-1/2 w-1 h-1 bg-yellow-400 rounded-full transform -translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-1/2 w-1 h-1 bg-yellow-500 rounded-full transform -translate-x-1/2"></div>
+          <div className="absolute left-0 top-1/2 w-1 h-1 bg-yellow-600 rounded-full transform -translate-y-1/2"></div>
+          <div className="absolute right-0 top-1/2 w-1 h-1 bg-yellow-400 rounded-full transform -translate-y-1/2"></div>
         </div>
       </div>
 
@@ -212,7 +190,7 @@ const CustomCursor: React.FC = () => {
       {particles.map((particle, index) => (
         <div
           key={particle.id}
-          className="fixed pointer-events-none z-[9996] text-emerald-400 animate-ping"
+          className="fixed pointer-events-none z-[99996] text-yellow-400 animate-ping"
           style={{
             left: `${particle.x - 6}px`,
             top: `${particle.y - 6}px`,
@@ -228,14 +206,14 @@ const CustomCursor: React.FC = () => {
       {/* Magnetic Field Effect (only visible on hover) */}
       {isHovering && (
         <div
-          className="fixed pointer-events-none z-[9995] rounded-full animate-pulse"
+          className="fixed pointer-events-none z-[99995] rounded-full animate-pulse"
           style={{
             left: `${position.x - 60}px`,
             top: `${position.y - 60}px`,
             width: '120px',
             height: '120px',
-            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
-            border: '1px solid rgba(139, 92, 246, 0.2)',
+            background: 'radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%)',
+            border: '1px solid rgba(255, 215, 0, 0.3)',
           }}
         />
       )}
@@ -243,13 +221,13 @@ const CustomCursor: React.FC = () => {
       {/* Click Ripple Effect */}
       {isClicking && (
         <div
-          className="fixed pointer-events-none z-[9994] rounded-full animate-ping"
+          className="fixed pointer-events-none z-[99994] rounded-full animate-ping"
           style={{
             left: `${position.x - 40}px`,
             top: `${position.y - 40}px`,
             width: '80px',
             height: '80px',
-            border: '2px solid rgba(239, 68, 68, 0.6)',
+            border: '2px solid rgba(255, 215, 0, 0.8)',
             animationDuration: '0.6s'
           }}
         />
