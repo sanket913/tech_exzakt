@@ -10,17 +10,7 @@
   
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-    cursor: none !important;
     background: #000000;
-  }
-  
-  *, *::before, *::after {
-    cursor: none !important;
-  }
-  
-  /* Hide default cursor on all elements */
-  button, a, input, textarea, select, [role="button"] {
-    cursor: none !important;
   }
 }
 
