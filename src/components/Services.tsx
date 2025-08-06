@@ -201,11 +201,11 @@ const Services: React.FC = () => {
                     {/* Service Stats */}
                     <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-black/30 rounded-xl border border-gray-800/30">
                       <div className="text-center">
-                        <div className="text-lg font-bold text-white font-heading">50+</div>
+                        <div className="text-lg font-bold text-white font-heading">10+</div>
                         <div className="text-xs text-gray-400 font-body">Projects</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg font-bold text-white font-heading">100%</div>
+                        <div className="text-lg font-bold text-white font-heading">90%</div>
                         <div className="text-xs text-gray-400 font-body">Success Rate</div>
                       </div>
                     </div>
