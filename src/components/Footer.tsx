@@ -16,8 +16,7 @@ const Footer: React.FC = () => {
     'Our Team',
     'Portfolio',
     'Process',
-    'Careers',
-    'Blog'
+    'Careers'
   ];
 
   const resources = [
