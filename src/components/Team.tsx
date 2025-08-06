@@ -6,7 +6,7 @@ const Team: React.FC = () => {
     {
     name: 'Dhruv Kachhiya',
     role: 'Chief Executive Officer (CEO)',
-    description: 'Dynamic executive with 3+ years of driving innovation, leading cross-functional teams, and scaling business operations in tech.',
+    description: 'Dynamic executive with 7+ years of driving innovation, leading cross-functional teams, and scaling business operations in tech.',
     image: '/dhruv.jpeg', // Replace with actual image path
     skills: ['Leadership', 'Innovation', 'Business Strategy', 'Operations'],
     social: {
