@@ -165,7 +165,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name *
+                      Full Name <span style="color: red;">*</span>
                     </label>
                     <input
                       type="text"
@@ -182,7 +182,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address *
+                      Email Address <span style="color: red;">*</span>
                     </label>
                     <div className="relative">
                       <input
@@ -201,7 +201,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number *
+                      Phone Number <span style="color: red;">*</span>
                     </label>
                     <div className="relative">
                       
@@ -221,7 +221,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="portfolio" className="block text-sm font-medium text-gray-300 mb-2">
-                      Portfolio/LinkedIn URL
+                      Portfolio/LinkedIn URL <span style="color: red;">*</span>
                     </label>
                     <input
                       type="url"
@@ -232,6 +232,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="https://your-portfolio.com"
                       disabled={isSubmitting}
+                      required
                     />
                   </div>
                 </div>
@@ -247,7 +248,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="college" className="block text-sm font-medium text-gray-300 mb-2">
-                      College/University *
+                      College/University <span style="color: red;">*</span>
                     </label>
                     <input
                       type="text"
@@ -264,7 +265,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="course" className="block text-sm font-medium text-gray-300 mb-2">
-                      Course/Degree *
+                      Course/Degree <span style="color: red;">*</span>
                     </label>
                     <input
                       type="text"
@@ -281,7 +282,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="year" className="block text-sm font-medium text-gray-300 mb-2">
-                      Current Year *
+                      Current Year <span style="color: red;">*</span>
                     </label>
                     <select
                       id="year"
@@ -301,7 +302,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="availability" className="block text-sm font-medium text-gray-300 mb-2">
-                      Availability *
+                      Availability <span style="color: red;">*</span>
                     </label>
                     <input
                       type="text"
@@ -328,7 +329,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label htmlFor="domain" className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Domain *
+                      Preferred Domain <span style="color: red;">*</span>
                     </label>
                     <select
                       id="domain"
@@ -347,7 +348,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="duration" className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Duration *
+                      Preferred Duration <span style="color: red;">*</span>
                     </label>
                     <select
                       id="duration"
@@ -368,7 +369,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="experience" className="block text-sm font-medium text-gray-300 mb-2">
-                      Relevant Experience/Skills
+                      Relevant Experience/Skills <span style="color: red;">*</span>
                     </label>
                     <textarea
                       id="experience"
@@ -379,12 +380,13 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Describe your relevant skills, projects, or experience..."
                       disabled={isSubmitting}
+                      required
                     />
                   </div>
 
                   <div>
                     <label htmlFor="motivation" className="block text-sm font-medium text-gray-300 mb-2">
-                      Why do you want to intern with us? *
+                      Why do you want to intern with us? 
                     </label>
                     <textarea
                       id="motivation"
@@ -395,7 +397,6 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your motivation and what you hope to learn..."
                       disabled={isSubmitting}
-                      required
                     />
                   </div>
                 </div>
