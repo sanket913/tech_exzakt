@@ -44,7 +44,7 @@ const Services: React.FC = () => {
       color: 'from-yellow-500 to-yellow-700',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: true
+      popular: false
     },
     {
       icon: FileText,
@@ -96,7 +96,7 @@ const Services: React.FC = () => {
        color: 'from-yellow-500 to-yellow-700',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: true
+      popular: false
     }
   ];
 
