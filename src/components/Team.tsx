@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Linkedin, Github, Mail } from 'lucide-react';
+import { User, Linkedin, Github, Mail, Globe } from 'lucide-react';
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -11,7 +11,7 @@ const Team: React.FC = () => {
     skills: ['Leadership', 'Innovation', 'Business Strategy', 'Operations'],
     social: {
       linkedin: 'https://www.linkedin.com/in/dhruv-kachhiya-2537681b9/',
-      github: '#', // Optional
+      website: 'https://dhruvkachhiya.com', // Personal website
       email: 'mann@gmail.com'
     }
   },
@@ -115,8 +115,12 @@ const Team: React.FC = () => {
                       <a href={member.social.linkedin} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
                         <Linkedin className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
                       </a>
-                      <a href={member.social.github} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
-                        <Github className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
+                      <a href={member.social.website || member.social.github} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
+                        {member.social.website ? (
+                          <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
+                        ) : (
+                          <Github className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
+                        )}
                       </a>
                       <a href={`mailto:${member.social.email}`} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-green-600 rounded-lg flex items-center justify-center transition-colors duration-300">
                         <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
