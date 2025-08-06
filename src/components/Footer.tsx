@@ -30,9 +30,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
+    { icon: Twitter, href: 'https://x.com/NxElite15511', color: 'hover:text-sky-400' },
+    { icon: Instagram, href: 'https://www.instagram.com/nxelite.in/', color: 'hover:text-pink-500' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/nx-elite/', color: 'hover:text-blue-600' },
   ];
 
   return (
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
               <p>© 2025 NxElite IT Solutions. All rights reserved.</p>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>Designed with ❤️ by NxElite Team</p>
+              <p>Designed with by NxElite Team</p>
             </div>
           </div>
         </div>
