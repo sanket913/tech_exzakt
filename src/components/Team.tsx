@@ -75,7 +75,7 @@ const Team: React.FC = () => {
         </div>
 
         {/* Leadership Team */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member, index) => (
             <div key={index} className="group">
               <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-yellow-500/30 transition-all duration-500">
