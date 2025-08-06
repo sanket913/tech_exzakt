@@ -77,8 +77,8 @@ const Team: React.FC = () => {
         {/* Leadership Team */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member, index) => (
-            <div key={index} className="group">
-              <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-yellow-500/30 transition-all duration-500">
+            <div key={index} className="group h-full">
+              <div className="premium-card flex flex-col justify-between h-full backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-yellow-500/30 transition-all duration-500">
                 <div className="flex items-start space-x-6">
                   {/* Profile Image */}
                   <div className="relative flex-shrink-0">
