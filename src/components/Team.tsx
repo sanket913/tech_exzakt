@@ -4,8 +4,20 @@ import { User, Linkedin, Github, Mail } from 'lucide-react';
 const Team: React.FC = () => {
   const teamMembers = [
     {
+    name: 'Dhruv Kachhiya',
+    role: 'Chief Executive Officer (CEO)',
+    description: 'Dynamic executive with 3+ years of driving innovation, leading cross-functional teams, and scaling business operations in tech.',
+    image: '/dhruv.jpeg', // Replace with actual image path
+    skills: ['Leadership', 'Innovation', 'Business Strategy', 'Operations'],
+    social: {
+      linkedin: 'https://www.linkedin.com/in/dhruv-kachhiya-2537681b9/',
+      github: '#', // Optional
+      email: 'mann@gmail.com'
+    }
+  },
+    {
       name: 'Mann Kachhiya',
-      role: 'Founder & CEO',
+      role: 'Founder',
       description: 'Visionary leader with 3+ years of experience in technology and business development.',
       image: '/mann.jpeg', // Replace with actual image URL
       skills: ['Leadership', 'Strategy', 'Business Development'],
