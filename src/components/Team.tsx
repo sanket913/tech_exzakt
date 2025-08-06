@@ -12,7 +12,7 @@ const Team: React.FC = () => {
     social: {
       linkedin: 'https://www.linkedin.com/in/dhruv-kachhiya-2537681b9/',
       website: 'https://dhruvkachhiya.com', // Personal website
-      email: 'mann@gmail.com'
+      email: 'dhruv@nxelite.in'
     }
   },
     {
@@ -23,8 +23,8 @@ const Team: React.FC = () => {
       skills: ['Leadership', 'Strategy', 'Business Development'],
       social: {
         linkedin: 'https://www.linkedin.com/in/mann-kachhiya/',
-        website: '#',
-        email: 'mann@gmail.com'
+        website: 'https://mannkachhiya.github.io/',
+        email: 'mann@nxelite.in'
       }
     },
     {
@@ -36,7 +36,7 @@ const Team: React.FC = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/sanket-prajapati27/',
         github: 'https://github.com/sanket913',
-        email: 'sanket2742003@gmail.com'
+        email: 'sanket@nxelite.in'
       }
     }
   ];
