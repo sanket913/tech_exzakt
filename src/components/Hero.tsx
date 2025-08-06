@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
               <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
                 <div className="text-center lg:text-left group">
                   <div className="flex items-center justify-center lg:justify-start mb-2">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black premium-gradient-text font-heading">50+</div>
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black premium-gradient-text font-heading">25+</div>
                     <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 ml-2 animate-pulse" />
                   </div>
                   <div className="text-gray-400 font-medium font-body text-sm sm:text-base">Projects</div>
