@@ -30,11 +30,9 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-blue-500' },
     { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
     { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
     { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: Github, href: '#', color: 'hover:text-gray-400' }
   ];
 
   return (
