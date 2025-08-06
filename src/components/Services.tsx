@@ -31,7 +31,11 @@ const Services: React.FC = () => {
       color: 'from-yellow-400 to-yellow-600',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '20+',
+        successRate: '97%',
+      }
     },
     {
       icon: Palette,
@@ -44,7 +48,11 @@ const Services: React.FC = () => {
       color: 'from-yellow-500 to-yellow-700',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '10+',
+        successRate: '95%',
+      }
     },
     {
       icon: FileText,
@@ -57,7 +65,11 @@ const Services: React.FC = () => {
       color: 'from-yellow-400 to-yellow-600',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '10+',
+        successRate: '98%',
+      }
     },
     {
       icon: Package,
@@ -70,7 +82,11 @@ const Services: React.FC = () => {
       color: 'from-yellow-500 to-yellow-700',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '10+',
+        successRate: '95%',
+      }
     },
     {
       icon: CreditCard,
@@ -83,7 +99,11 @@ const Services: React.FC = () => {
       color: 'from-yellow-400 to-yellow-600',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '5+',
+        successRate: '94%',
+      }
     },
     {
       icon: Settings,
@@ -96,7 +116,11 @@ const Services: React.FC = () => {
        color: 'from-yellow-500 to-yellow-700',
       bgColor: 'from-yellow-500/10 to-yellow-600/10',
       borderColor: 'border-yellow-500/30',
-      popular: false
+      popular: false,
+      stats: {
+        projects: '10+',
+        successRate: '92%',
+      }
     }
   ];
 
@@ -333,11 +357,11 @@ const Services: React.FC = () => {
                 {/* Service Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-black/30 rounded-xl border border-gray-800/30">
                   <div className="text-center">
-                    <div className="text-lg font-bold text-white font-heading">50+</div>
+                    <div className="text-lg font-bold text-white font-heading">{service.stats.projects}</div>
                     <div className="text-xs text-gray-400 font-body">Projects</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-lg font-bold text-white font-heading">100%</div>
+                    <div className="text-lg font-bold text-white font-heading">{service.stats.successRate}</div>
                     <div className="text-xs text-gray-400 font-body">Success Rate</div>
                   </div>
                 </div>
