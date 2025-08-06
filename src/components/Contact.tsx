@@ -75,14 +75,14 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      content: '<a href="tel:+917600978440">+91 76009 78440</a>',
+      content: '+91 76009 78440',
       description: 'Mon - Fri: 9:00 AM - 6:00 PM',
       color: 'from-green-500 to-emerald-600'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      content: '<a href="mailto:info@nxelite.in">info@nxelite.in</a>',
+      content: 'info@nxelite.in',
       description: 'We reply within 24 hours',
       color: 'from-blue-500 to-cyan-600'
     },
