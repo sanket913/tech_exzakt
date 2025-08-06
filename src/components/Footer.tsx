@@ -1,4 +1,4 @@
-zimport React from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -155,10 +155,10 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-center md:text-left">
-              <p>© 2025 NxElite IT Solutions. All rights reserved.</p>
+              <p>© 2025 Tech Exzakt IT Solutions. All rights reserved.</p>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>Designed with ❤️ by NxElite Team</p>
+              <p>Designed with ❤️ by Tech Exzakt Team</p>
             </div>
           </div>
         </div>
