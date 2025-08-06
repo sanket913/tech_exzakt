@@ -23,8 +23,7 @@ const Footer: React.FC = () => {
     'Documentation',
     'Help Center',
     'Privacy Policy',
-    'Terms of Service',
-    'Cookie Policy'
+    'Terms of Service'
   ];
 
   const socialLinks = [
