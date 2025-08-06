@@ -25,8 +25,7 @@ const Footer: React.FC = () => {
     'Help Center',
     'Privacy Policy',
     'Terms of Service',
-    'Cookie Policy',
-    'Sitemap'
+    'Cookie Policy'
   ];
 
   const socialLinks = [
@@ -78,7 +77,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
+                    <a href="#services" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{service}</span>
                     </a>
@@ -93,7 +92,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
+                    <a href="#team" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{item}</span>
                     </a>
