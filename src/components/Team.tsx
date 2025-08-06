@@ -23,7 +23,7 @@ const Team: React.FC = () => {
       skills: ['Leadership', 'Strategy', 'Business Development'],
       social: {
         linkedin: 'https://www.linkedin.com/in/mann-kachhiya/',
-        github: '#',
+        website: '#',
         email: 'mann@gmail.com'
       }
     },
