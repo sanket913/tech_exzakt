@@ -165,7 +165,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name <span style="color: red;">*</span>
+                      Full Name *
                     </label>
                     <input
                       type="text"
@@ -182,7 +182,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address <span style="color: red;">*</span>
+                      Email Address *
                     </label>
                     <div className="relative">
                       <input
@@ -201,7 +201,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number <span style="color: red;">*</span>
+                      Phone Number *
                     </label>
                     <div className="relative">
                       
@@ -221,7 +221,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="portfolio" className="block text-sm font-medium text-gray-300 mb-2">
-                      Portfolio/LinkedIn URL <span style="color: red;">*</span>
+                      Portfolio/LinkedIn URL *
                     </label>
                     <input
                       type="url"
@@ -248,7 +248,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="college" className="block text-sm font-medium text-gray-300 mb-2">
-                      College/University <span style="color: red;">*</span>
+                      College/University *
                     </label>
                     <input
                       type="text"
@@ -265,7 +265,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="course" className="block text-sm font-medium text-gray-300 mb-2">
-                      Course/Degree <span style="color: red;">*</span>
+                      Course/Degree *
                     </label>
                     <input
                       type="text"
@@ -282,7 +282,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="year" className="block text-sm font-medium text-gray-300 mb-2">
-                      Current Year <span style="color: red;">*</span>
+                      Current Year *
                     </label>
                     <select
                       id="year"
@@ -302,7 +302,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="availability" className="block text-sm font-medium text-gray-300 mb-2">
-                      Availability <span style="color: red;">*</span>
+                      Availability *
                     </label>
                     <input
                       type="text"
@@ -329,7 +329,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <label htmlFor="domain" className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Domain <span style="color: red;">*</span>
+                      Preferred Domain *
                     </label>
                     <select
                       id="domain"
@@ -348,7 +348,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="duration" className="block text-sm font-medium text-gray-300 mb-2">
-                      Preferred Duration <span style="color: red;">*</span>
+                      Preferred Duration *
                     </label>
                     <select
                       id="duration"
@@ -369,7 +369,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <div className="space-y-4">
                   <div>
                     <label htmlFor="experience" className="block text-sm font-medium text-gray-300 mb-2">
-                      Relevant Experience/Skills <span style="color: red;">*</span>
+                      Relevant Experience/Skills *
                     </label>
                     <textarea
                       id="experience"
