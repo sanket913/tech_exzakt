@@ -31,9 +31,9 @@ const Team: React.FC = () => {
 
   const stats = [
     { number: '10+', label: 'Team Members' },
-    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Projects Completed' },
     { number: '5+', label: 'Years Experience' },
-    { number: '100%', label: 'Client Satisfaction' }
+    { number: '96%', label: 'Client Satisfaction' }
   ];
 
   return (
