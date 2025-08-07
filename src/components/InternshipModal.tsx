@@ -386,7 +386,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                   <div>
                     <label htmlFor="motivation" className="block text-sm font-medium text-gray-300 mb-2">
-                      Why do you want to intern with us? 
+                      Why do you want to intern with us? *
                     </label>
                     <textarea
                       id="motivation"
@@ -397,6 +397,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your motivation and what you hope to learn..."
                       disabled={isSubmitting}
+                      required
                     />
                   </div>
                 </div>
