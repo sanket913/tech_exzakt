@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
               <p>© 2025 NxElite IT Solutions. All rights reserved.</p>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>Designed with by NxElite Team</p>
+              <p>Designed by NxElite Team</p>
             </div>
           </div>
         </div>
