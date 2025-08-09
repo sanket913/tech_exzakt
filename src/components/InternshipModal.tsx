@@ -39,8 +39,8 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
     'SEO/SEM'
   ];
 
-  const durations = ['3 months', '6 months', '1 year'];
-  const years = ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Graduate', 'Post Graduate'];
+  const durations = ['1 month','3 months', '6 months'];
+  const years = ['Diploma','1st Year', '2nd Year', '3rd Year', '4th Year', 'Graduate', 'Post Graduate'];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -80,7 +80,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
           course: '',
           year: '',
           domain: 'Web Development',
-          duration: '3 months',
+          duration: '1 month',
           experience: '',
           motivation: '',
           portfolio: '',
@@ -120,16 +120,16 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
       ></div>
 
       {/* Modal */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-3xl overflow-hidden">
+      <div className="relative w-full max-w-4xl max-h-[90vh] bg-gradient-to-br from-gray-800 to-black backdrop-blur-xl border border-gray-700/50 rounded-3xl overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+        <div className="flex items-center justify-between p-6 border-b border-gray-800">
           <div>
             <h2 className="text-2xl font-bold text-white font-heading">Internship Application</h2>
-            <p className="text-slate-300 font-body">Join our team and kickstart your career</p>
+            <p className="text-gray-300 font-body">Join our team and kickstart your career</p>
           </div>
           <button
             onClick={onClose}
-            className="w-10 h-10 bg-slate-800/50 hover:bg-slate-700/50 rounded-full flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300"
+            className="w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
           >
             <X className="w-5 h-5" />
           </button>
@@ -156,15 +156,15 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Personal Information */}
-              <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/30">
+              <div className="bg-gray-800 rounded-2xl p-6 border border-gray-800/30">
                 <h3 className="text-lg font-semibold text-white mb-4 font-heading flex items-center">
-                  <User className="w-5 h-5 mr-2 text-indigo-400" />
+                  <User className="w-5 h-5 mr-2 text-yellow-400" />
                   Personal Information
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="fullName" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -173,7 +173,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="Enter your full name"
                       disabled={isSubmitting}
                       required
@@ -181,18 +181,18 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                      <Mail className="absolute left-4 top-1/2 transform -trangray-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="email"
                         id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                         placeholder="your@email.com"
                         disabled={isSubmitting}
                         required
@@ -201,18 +201,18 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number *
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                      <Phone className="absolute left-4 top-1/2 transform -trangray-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                         placeholder="+91 9876543210"
                         disabled={isSubmitting}
                         required
@@ -221,7 +221,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="portfolio" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="portfolio" className="block text-sm font-medium text-gray-300 mb-2">
                       Portfolio/LinkedIn URL
                     </label>
                     <input
@@ -230,7 +230,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="portfolio"
                       value={formData.portfolio}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="https://your-portfolio.com"
                       disabled={isSubmitting}
                     />
@@ -239,15 +239,15 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
               </div>
 
               {/* Academic Information */}
-              <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/30">
+              <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/30">
                 <h3 className="text-lg font-semibold text-white mb-4 font-heading flex items-center">
-                  <GraduationCap className="w-5 h-5 mr-2 text-indigo-400" />
+                  <GraduationCap className="w-5 h-5 mr-2 text-yellow-400" />
                   Academic Information
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="college" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="college" className="block text-sm font-medium text-gray-300 mb-2">
                       College/University *
                     </label>
                     <input
@@ -256,7 +256,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="college"
                       value={formData.college}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="Enter your college name"
                       disabled={isSubmitting}
                       required
@@ -264,7 +264,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="course" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="course" className="block text-sm font-medium text-gray-300 mb-2">
                       Course/Degree *
                     </label>
                     <input
@@ -273,7 +273,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="course"
                       value={formData.course}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="e.g., B.Tech Computer Science"
                       disabled={isSubmitting}
                       required
@@ -281,7 +281,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="year" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="year" className="block text-sm font-medium text-gray-300 mb-2">
                       Current Year *
                     </label>
                     <select
@@ -289,7 +289,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="year"
                       value={formData.year}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       disabled={isSubmitting}
                       required
                     >
@@ -301,7 +301,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="availability" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="availability" className="block text-sm font-medium text-gray-300 mb-2">
                       Availability *
                     </label>
                     <input
@@ -310,7 +310,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="availability"
                       value={formData.availability}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       placeholder="e.g., Full-time, Part-time, Weekends"
                       disabled={isSubmitting}
                       required
@@ -320,15 +320,15 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
               </div>
 
               {/* Internship Preferences */}
-              <div className="bg-slate-800/30 rounded-2xl p-6 border border-slate-700/30">
+              <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/30">
                 <h3 className="text-lg font-semibold text-white mb-4 font-heading flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 text-indigo-400" />
+                  <Calendar className="w-5 h-5 mr-2 text-yellow-400" />
                   Internship Preferences
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="domain" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="domain" className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Domain *
                     </label>
                     <select
@@ -336,7 +336,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="domain"
                       value={formData.domain}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       disabled={isSubmitting}
                       required
                     >
@@ -347,7 +347,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                   </div>
 
                   <div>
-                    <label htmlFor="duration" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="duration" className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Duration *
                     </label>
                     <select
@@ -355,7 +355,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       name="duration"
                       value={formData.duration}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       disabled={isSubmitting}
                       required
                     >
@@ -368,7 +368,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
 
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="experience" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="experience" className="block text-sm font-medium text-gray-300 mb-2">
                       Relevant Experience/Skills
                     </label>
                     <textarea
@@ -377,14 +377,14 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       value={formData.experience}
                       onChange={handleChange}
                       rows={3}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Describe your relevant skills, projects, or experience..."
                       disabled={isSubmitting}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="motivation" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="motivation" className="block text-sm font-medium text-gray-300 mb-2">
                       Why do you want to intern with us? *
                     </label>
                     <textarea
@@ -393,7 +393,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                       value={formData.motivation}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your motivation and what you hope to learn..."
                       disabled={isSubmitting}
                       required
@@ -403,11 +403,11 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
               </div>
 
               {/* Submit Button */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 pb-4">
                 <button
                   type="button"
                   onClick={onClose}
-                  className="flex-1 bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 hover:text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 border border-slate-700 hover:border-slate-600"
+                  className="flex-1 bg-gray-800/50 hover:bg-gray-700/50 text-gray-300 hover:text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 border border-gray-700 hover:border-gray-600"
                   disabled={isSubmitting}
                 >
                   Cancel
@@ -415,7 +415,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 premium-gradient text-black py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
