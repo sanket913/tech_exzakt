@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,28 +9,14 @@
   }
   
   body {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  }
-  
-  /* Hide default cursor only on desktop devices */
-  @media (min-width: 769px) and (hover: hover) and (pointer: fine) {
-    body {
-      cursor: none !important;
-    }
-    
-    *, *::before, *::after {
-      cursor: none !important;
-    }
-    
-    button, a, input, textarea, select, [role="button"] {
-      cursor: none !important;
-    }
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    background: #000000;
   }
 }
 
 @layer utilities {
   .font-heading {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
   
   .font-mono {
@@ -38,7 +24,7 @@
   }
   
   .font-body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   
   .animate-fade-in-up {
@@ -108,20 +94,32 @@
   }
   
   .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
   }
   
-  .tech-gradient {
-    background: linear-gradient(135deg, #10b981, #3b82f6, #8b5cf6);
+  .premium-gradient {
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
   }
   
-  .tech-gradient-text {
-    background: linear-gradient(135deg, #10b981, #3b82f6);
+  .premium-gradient-text {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .premium-border {
+    border: 1px solid rgba(255, 215, 0, 0.3);
+  }
+
+  .premium-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+
+  .premium-text-glow {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
   }
 }
 
@@ -130,10 +128,10 @@
   position: fixed;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #FFD700, #FFA500);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99999;
   transition: transform 0.1s ease;
   mix-blend-mode: difference;
 }
@@ -142,10 +140,10 @@
   position: fixed;
   width: 40px;
   height: 40px;
-  border: 2px solid rgba(16, 185, 129, 0.5);
+  border: 2px solid rgba(255, 215, 0, 0.5);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 99998;
   transition: all 0.3s ease;
 }
 
@@ -155,16 +153,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #FFD700, #FFA500);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #059669, #2563eb);
+  background: linear-gradient(135deg, #FFA500, #FFD700);
 }
 
 /* Responsive Typography */
@@ -194,4 +192,40 @@
     font-size: 5rem;
     line-height: 1.1;
   }
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Premium animations */
+@keyframes goldShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: goldShimmer 2s infinite;
+}
+
+.premium-card {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.9));
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 215, 0, 0.1);
+}
+
+.premium-card:hover {
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 215, 0, 0.2),
+    inset 0 1px 0 rgba(255, 215, 0, 0.2);
 }

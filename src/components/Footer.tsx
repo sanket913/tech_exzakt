@@ -16,32 +16,27 @@ const Footer: React.FC = () => {
     'Our Team',
     'Portfolio',
     'Process',
-    'Careers',
-    'Blog'
+    'Careers'
   ];
 
   const resources = [
     'Documentation',
     'Help Center',
     'Privacy Policy',
-    'Terms of Service',
-    'Cookie Policy',
-    'Sitemap'
+    'Terms of Service'
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-blue-500' },
-    { icon: Twitter, href: '#', color: 'hover:text-sky-400' },
-    { icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-    { icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { icon: Github, href: '#', color: 'hover:text-gray-400' }
+    { icon: Twitter, href: 'https://x.com/NxElite15511', color: 'hover:text-sky-400' },
+    { icon: Instagram, href: 'https://www.instagram.com/nxelite.in/', color: 'hover:text-pink-500' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/nx-elite/', color: 'hover:text-blue-600' },
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-slate-900">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-black to-gray-900">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900 to-slate-800"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900 to-black"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -52,12 +47,12 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <img
-                  src="/footer.png" // or .png if that's the actual format
+                  src="/header.png" // or .png if that's the actual format
                   alt="Tech Exzakt"
                   className="w-24 sm:w-28 md:w-32 lg:w-36 object-contain transition-all duration-300"
                 />
               </div>
-              <p className="text-slate-300 leading-relaxed mb-6">
+              <p className="text-gray-300 leading-relaxed mb-6">
                 Transforming ideas into powerful digital experiences. We deliver innovative solutions 
                 that drive business growth and success.
               </p>
@@ -80,7 +75,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#services" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{service}</span>
                     </a>
@@ -95,7 +90,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#team" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{item}</span>
                     </a>
@@ -110,7 +105,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {resources.map((resource, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group">
+                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{resource}</span>
                     </a>
@@ -121,7 +116,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/30">
+          <div className="premium-card backdrop-blur-sm rounded-2xl p-8 mb-8 border border-slate-700/30">
             <h4 className="text-2xl font-bold text-white text-center mb-8">Get In Touch</h4>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center group">
@@ -135,7 +130,7 @@ const Footer: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white font-semibold mb-1">info@techexzakt.com</p>
+                <p className="text-white font-semibold mb-1">info@nxelite.in</p>
                 <p className="text-slate-400 text-sm">We reply within 24 hours</p>
               </div>
               <div className="text-center group">
@@ -148,34 +143,17 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Newsletter */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 mb-8 border border-cyan-500/20">
-            <div className="text-center mb-6">
-              <h4 className="text-2xl font-bold text-white mb-2">Stay Updated</h4>
-              <p className="text-slate-300">Subscribe to our newsletter for the latest updates and insights</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-              />
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2">
-                <span>Subscribe</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
+      
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-center md:text-left">
-              <p>© 2025 Tech Exzakt IT Solutions. All rights reserved.</p>
+              <p>© 2025 NxElite IT Solutions. All rights reserved.</p>
             </div>
-            <div className="text-slate-400 text-center md:text-right">
-              <p>Designed with ❤️ by Tech Exzakt Team</p>
+            <div className="text-gray-400 text-center md:text-right">
+              <p>Designed by NxElite Team</p>
             </div>
           </div>
         </div>

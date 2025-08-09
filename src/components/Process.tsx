@@ -7,55 +7,55 @@ const Process: React.FC = () => {
       icon: MessageCircle,
       title: 'Discovery & Planning',
       description: 'We start by understanding your goals, target audience, and project requirements through detailed consultation.',
-      color: 'from-cyan-500 to-blue-600',
+      color: 'from-yellow-500 to-yellow-600',
       delay: '0'
     },
     {
       icon: Lightbulb,
       title: 'Strategy & Design',
       description: 'Our team creates comprehensive strategies and stunning designs that align with your brand and objectives.',
-      color: 'from-purple-500 to-pink-600',
+      color: 'from-yellow-500 to-yellow-600',
       delay: '200'
     },
     {
       icon: Code,
       title: 'Development & Testing',
       description: 'We build your solution using cutting-edge technologies with rigorous testing to ensure quality and performance.',
-      color: 'from-green-500 to-emerald-600',
+      color: 'from-yellow-500 to-yellow-600',
       delay: '400'
     },
     {
       icon: Rocket,
       title: 'Launch & Support',
       description: 'We deploy your project and provide ongoing support to ensure continued success and optimal performance.',
-      color: 'from-orange-500 to-red-600',
+      color: 'from-yellow-500 to-yellow-600',
       delay: '600'
     }
   ];
 
   return (
-    <section id="process" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-slate-900"></div>
+    <section id="process" className="py-5 relative overflow-hidden bg-gradient-to-b from-black-900 to-gray-800" style={{ zIndex: 1 }}>
+      <div className="absolute inset-0 "></div>
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-8 relative" style={{ zIndex: 10 }}>
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Process</span>
+            Our <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">Process</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A proven methodology that ensures successful project delivery from concept to launch
           </p>
         </div>
 
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-500 via-purple-500 via-green-500 to-orange-500 transform -translate-y-1/2"></div>
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 premium-gradient transform -translate-y-1/2"></div>
           
           <div className="grid lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative group">
                 {/* Step Card */}
-                <div className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/30 transition-all duration-500 text-center animate-fade-in-up`}
+                <div className={`premium-card backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/30 transition-all duration-500 text-center animate-fade-in-up`}
                      style={{ animationDelay: `${step.delay}ms` }}>
                   
                   {/* Step Number */}
@@ -83,18 +83,7 @@ const Process: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-            <p className="text-slate-300 mb-6">Let's discuss your ideas and create something amazing together</p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2 mx-auto">
-              <span>Start Your Project</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

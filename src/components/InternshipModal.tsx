@@ -15,7 +15,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
     course: '',
     year: '',
     domain: 'Web Development',
-    duration: '3 months',
+    duration: '1 month',
     experience: '',
     motivation: '',
     portfolio: '',
@@ -55,7 +55,7 @@ const InternshipModal: React.FC<InternshipModalProps> = ({ isOpen, onClose }) =>
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/internship', {
+      const response = await fetch('https://tech-exzakt.onrender.com/api/internship', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

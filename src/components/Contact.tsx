@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://tech-exzakt.onrender.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'info@techexzakt.com',
+      content: 'info@nxelite.in',
       description: 'We reply within 24 hours',
       color: 'from-blue-500 to-cyan-600'
     },
@@ -97,14 +97,14 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-gray-900"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Let's <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Connect</span>
+            Let's <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">Connect</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your digital presence? Get in touch with us and let's create something amazing together
           </p>
         </div>
@@ -113,13 +113,13 @@ const Contact: React.FC = () => {
           {/* Contact Info Cards */}
           {contactInfo.map((info, index) => (
             <div key={index} className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/30 transition-all duration-500 text-center h-full">
+              <div className="premium-card backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/30 transition-all duration-500 text-center h-full">
                 <div className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <info.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{info.title}</h3>
-                <p className="text-cyan-400 font-semibold mb-2">{info.content}</p>
-                <p className="text-slate-400 text-sm">{info.description}</p>
+                <p className="text-yellow-400 font-semibold mb-2">{info.content}</p>
+                <p className="text-gray-400 text-sm">{info.description}</p>
               </div>
             </div>
           ))}
@@ -128,7 +128,7 @@ const Contact: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8">
+            <div className="premium-card backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
               
               {/* Status Messages */}
@@ -149,14 +149,14 @@ const Contact: React.FC = () => {
                       Your Name *
                     </label>
                     <div className="relative">
-                      <User className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                      <User className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="text"
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                         placeholder="Your Name"
                         disabled={isSubmitting}
                         required
@@ -165,18 +165,18 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                      <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="email"
                         id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                         placeholder="your@email.com"
                         disabled={isSubmitting}
                         required
@@ -187,18 +187,18 @@ const Contact: React.FC = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
                     <div className="relative">
-                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+                      <Phone className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <input
                         type="tel"
                         id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                         placeholder="+91 9876543210"
                         disabled={isSubmitting}
                       />
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                       Subject *
                     </label>
                     <select
@@ -214,7 +214,7 @@ const Contact: React.FC = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       disabled={isSubmitting}
                       required
                     >
@@ -229,18 +229,18 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
                   <div className="relative">
-                    <MessageCircle className="absolute left-4 top-4 w-5 h-5 text-slate-400" />
+                    <MessageCircle className="absolute left-4 top-4 w-5 h-5 text-gray-400" />
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none"
+                      className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-slate-400 focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your project..."
                       disabled={isSubmitting}
                       required
@@ -251,7 +251,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="group w-full bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className={`w-5 h-5 transition-transform ${isSubmitting ? 'animate-pulse' : 'group-hover:translate-x-1'}`} />
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
@@ -263,7 +263,7 @@ const Contact: React.FC = () => {
           {/* Additional Info */}
           <div className="space-y-8">
             {/* Quick Response */}
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <div className="premium-card backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
                   <Clock className="w-6 h-6 text-white" />
@@ -279,27 +279,25 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Free Consultation */}
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-4">Free Consultation</h3>
-              <p className="text-slate-300 mb-6">
-                Schedule a free 30-minute consultation to discuss your project requirements 
-                and explore how we can help bring your vision to life.
-              </p>
-              <button className="group bg-slate-800/50 hover:bg-slate-700/50 text-white py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2">
-                <span>Schedule Call</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            
 
             {/* Project Estimate */}
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <div className="premium-card backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-white mb-4">Get Project Estimate</h3>
               <p className="text-slate-300 mb-6">
                 Receive a detailed project estimate with timeline and cost breakdown 
                 within 24 hours of your inquiry.
               </p>
-              <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2">
+              <button className="group bg-gradient-to-r from-yellow-500 to-yellow-600 text-black py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2" onClick={() => {
+                  // Scroll to contact form
+                  const contactForm = document.querySelector('form');
+                  if (contactForm) {
+                    contactForm.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'center'
+                    });
+                  }
+                }}>
                 <span>Get Estimate</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
