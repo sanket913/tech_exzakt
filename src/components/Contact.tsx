@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
       if (result.success) {
         setSubmitStatus({
           type: 'success',
-          message: result.message || 'Thank you for your message! We will get back to you within 24 hours.'
+          message: result.message || 'Thank you for your message! We will get back to you within 24 hours.Please check your email for confirmation.'
         });
         
         // Reset form
