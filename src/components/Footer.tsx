@@ -21,7 +21,6 @@ const Footer: React.FC = () => {
   ];
 
   const resources = [
-    'Documentation',
     'Help Center',
     'Privacy Policy',
     'Terms of Service'
