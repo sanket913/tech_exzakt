@@ -99,16 +99,19 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Resources */}
+           {/* Resources */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
               <ul className="space-y-3">
                 {resources.map((resource, index) => (
                   <li key={index}>
-                    <a href="#" className="text-slate-300 hover:text-yellow-400 transition-colors duration-300 flex items-center group">
+                    <Link 
+                      to={`/${resource.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '')}`} 
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 flex items-center group"
+                    >
                       <ArrowRight className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-2 transition-transform duration-300">{resource}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
