@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, ArrowRight, Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const services = [
