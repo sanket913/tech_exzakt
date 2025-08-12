@@ -238,9 +238,7 @@ During my internships, I worked on multiple client projects involving PHP, MySQL
             </div>
           </div>
         </div>
-      </div>
-
-     
+      </div>    
     </div>
   );
 };
