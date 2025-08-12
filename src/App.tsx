@@ -13,7 +13,7 @@ import Documentation from './pages/Documentation';
 import HelpCenter from './pages/HelpCenter';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
-
+import TeamMember from './pages/TeamMember';
 
 function App() {
   return (
