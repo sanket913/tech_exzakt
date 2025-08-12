@@ -11,7 +11,7 @@ const Team: React.FC = () => {
     skills: ['Leadership', 'Innovation', 'Business Strategy', 'Operations'],
     social: {
       linkedin: 'https://www.linkedin.com/in/dhruv-kachhiya-2537681b9/',
-      website: 'https://dhruvkachhiya.com', // Personal website
+      website: '#', // Personal website
       email: 'dhruv@nxelite.in'
     }
   },
@@ -23,7 +23,7 @@ const Team: React.FC = () => {
       skills: ['Leadership', 'Strategy', 'Business Development'],
       social: {
         linkedin: 'https://www.linkedin.com/in/mann-kachhiya/',
-        website: 'https://mannkachhiya.github.io/',
+        website: '#',
         email: 'mann@nxelite.in'
       }
     },
@@ -35,7 +35,7 @@ const Team: React.FC = () => {
       skills: ['Full-Stack Development', 'Architecture', 'DevOps'],
       social: {
         linkedin: 'https://www.linkedin.com/in/sanket-prajapati27/',
-        github: 'https://github.com/sanket913',
+        website: '#',
         email: 'sanket@nxelite.in'
       }
     }
@@ -115,7 +115,7 @@ const Team: React.FC = () => {
                       <a href={member.social.linkedin} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
                         <Linkedin className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
                       </a>
-                      <a href={member.social.website || member.social.github} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
+                      <a href={`/team/${member.id}`} className="w-7 h-7 sm:w-8 sm:h-8 bg-slate-800/50 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300">
                         {member.social.website ? (
                           <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-slate-400 hover:text-white" />
                         ) : (
