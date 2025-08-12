@@ -4,6 +4,7 @@ import { User, Linkedin, Github, Mail, Globe } from 'lucide-react';
 const Team: React.FC = () => {
   const teamMembers = [
     {
+    id:'dhruv-kachhiya',
     name: 'Dhruv Kachhiya',
     role: 'Chief Executive Officer (CEO)',
     description: 'Dynamic executive with 7+ years of driving innovation, leading cross-functional teams, and scaling business operations in tech.',
@@ -16,6 +17,7 @@ const Team: React.FC = () => {
     }
   },
     {
+      id:'mann-kachhiya',
       name: 'Mann Kachhiya',
       role: 'Founder',
       description: 'Visionary leader with 3+ years of experience in technology and business development.',
@@ -28,6 +30,7 @@ const Team: React.FC = () => {
       }
     },
     {
+      id:'sanket-prajapati',
       name: 'Sanket Prajapati',
       role: 'Co-Founder & CTO',
       description: 'Technical expert in modern web technologies and software architecture.',
