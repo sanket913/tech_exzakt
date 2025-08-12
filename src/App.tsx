@@ -13,6 +13,7 @@ import Documentation from './pages/Documentation';
 import HelpCenter from './pages/HelpCenter';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import TeamMember from './pages/TeamMember';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/help-center" element={<HelpCenter />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/team/:memberId" element={<TeamMember />} />
         </Routes>
     </div>
     </Router>
