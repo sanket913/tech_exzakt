@@ -13,7 +13,7 @@ const TeamMember: React.FC = () => {
       subtitle: '7+ Years Experience | M.Tech IIT Bombay | EV Charger Development',
       location: 'Bengaluru, Karnataka, India',
       image: '/dhruv.jpeg',
-      about: `I'm a hardware design engineer with 3+ years of experience in power electronics, embedded systems, and EV charger development. I currently work at Ola Electric, where I contribute to the design, layout, and validation of SMPS-based vehicle chargers and embedded control systems using TI C2000 microcontrollers.
+      about: `I'm a hardware design engineer with 7+ years of experience in power electronics, embedded systems, and EV charger development. I currently work at Ola Electric, where I contribute to the design, layout, and validation of SMPS-based vehicle chargers and embedded control systems using TI C2000 microcontrollers.
 
 I hold an M.Tech in Power Electronics from IIT Bombay, where I was honored with the Academic Excellence Award and the Best Thesis Award from the Electrical Engineering Department for my work on fault-tolerant converter design.
 
@@ -244,3 +244,4 @@ During my internships, I worked on multiple client projects involving PHP, MySQL
 };
 
 export default TeamMember;
+
