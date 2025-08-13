@@ -40,7 +40,7 @@ I'm passionate about designing robust, efficient hardware that powers innovation
         linkedin: 'https://www.linkedin.com/in/dhruv-kachhiya-2537681b9/',
       },
       stats: {
-        experience: '3+',
+        experience: '7+',
         projects: '15+',
         publications: '1',
         awards: '2'
